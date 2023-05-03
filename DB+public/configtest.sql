@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1:3306
--- Létrehozás ideje: 2023. Máj 03. 22:32
+-- Létrehozás ideje: 2023. Máj 03. 22:43
 -- Kiszolgáló verziója: 5.7.36
 -- PHP verzió: 7.4.26
 
@@ -236,14 +236,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `role` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- A tábla adatainak kiíratása `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `role`) VALUES
-(1, 'admin', 'admin@admin.com', NULL, '$2a$12$VhGgbIZIoX54a61Vwbpavu.AVrJ/NU3EHM.7nTiS6nHHqx8yycDcK', NULL, NULL, NULL, 1);
+(1, 'admin', 'admin@admin.com', NULL, '$2a$12$VhGgbIZIoX54a61Vwbpavu.AVrJ/NU3EHM.7nTiS6nHHqx8yycDcK', NULL, NULL, NULL, 1),
+(2, 'Editor', 'editor@editor.com', NULL, '$2a$12$.2yl2R53kpjbL.8VaD7DeeN6DYkG44NnKm/CXjX5PWyS4.1JaPh8O', NULL, NULL, NULL, 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
